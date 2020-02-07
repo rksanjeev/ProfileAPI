@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
+    'UserProfile',
 
 ]
 
@@ -78,7 +80,7 @@ WSGI_APPLICATION = 'ProfileAPI.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'django_API',
+        'NAME': 'test',
         'USER': 'postgres',
         'PASSWORD': 'root911',
         'HOST': '127.0.0.1',
@@ -124,3 +126,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+AUTH_USER_MODEL = 'UserProfile.UserModel'
+
