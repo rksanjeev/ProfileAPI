@@ -4,6 +4,7 @@ from UserProfile import views
 
 router = routers.DefaultRouter()
 router.register(r'profile', views.UserProfile)
+router.register(r'feed', views.UserProfileViewSet)
 
 urlpatterns = [
     path('login/', views.UserLoginAPIView.as_view()),

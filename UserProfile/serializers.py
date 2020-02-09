@@ -1,5 +1,5 @@
-from rest_framework.serializers import HyperlinkedModelSerializer
-from UserProfile.models import UserModel, UserProfileManager
+from rest_framework.serializers import HyperlinkedModelSerializer, ModelSerializer
+from UserProfile.models import UserModel, UserProfileManager, ProfileFeed
 
 
 class UserSerializer(HyperlinkedModelSerializer):
@@ -25,4 +25,16 @@ class UserSerializer(HyperlinkedModelSerializer):
             )
             return user
 
-        
+
+class ProfileFeedSerializer(ModelSerializer):
+    """Serializer for user feeds"""
+    class Meta:
+        model = ProfileFeed
+        fields = ('id', 'user', 'status', 'created_at')
+        extra_kwargs =  {
+            'user':{
+                'read_only':True
+            }
+        }
+
+
