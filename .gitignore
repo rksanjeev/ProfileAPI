@@ -1,7 +1,13 @@
 *.pyc
+<<<<<<< HEAD
 __pycache__/
 __pycache__
 .idea
 .vscode
 migrations/
 migrations
+=======
+__pycache__
+.idea
+.vscode
+>>>>>>> 31f881f141c9f3684862e62c87dd9b501c86aa32
