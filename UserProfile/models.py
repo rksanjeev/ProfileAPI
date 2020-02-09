@@ -57,3 +57,12 @@ class UserModel(AbstractBaseUser,PermissionsMixin):
         return "@{}".format(self.email)
     
 
+
+
+class ProfileFeed(models.Model):
+    user = models.ForeignKey(UserModel, on_delete=models.CASCADE)
+    status = models.TextField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.status

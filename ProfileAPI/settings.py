@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'ProfileAPI.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'test',
+        'NAME': 'djangoAPI',
         'USER': 'postgres',
         'PASSWORD': 'root911',
         'HOST': '127.0.0.1',
